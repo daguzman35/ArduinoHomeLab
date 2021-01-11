@@ -17,6 +17,17 @@ Probado en Arduino Uno.
  Modifique los parámetros en la sección 'parámetros de usuario'.
  Evite alterar otras partes del código.
  
+Configuración por defecto:
+
+| Parámetro         | Valor           |
+| ------------- | -------------|
+| comunicación serial   | 115200 baud |
+| frecuencia de muestreo     | 10kHz (T=100us)      |
+| número de muestras | 501      |
+|umbral disparo A0          | int 50 = aprox. 250mV |
+ |tiempo refresco datos      | 5 segundos |
+
+ 
 ## Historial de versiones
  
  ### v21.1
