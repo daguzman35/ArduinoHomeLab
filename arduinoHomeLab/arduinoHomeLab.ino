@@ -18,6 +18,18 @@
  *    
  *  Modifique los parámetros en la sección 'parámetros de usuario'.
  *  Evite alterar otras partes del código.
+ *  
+ *  En el Arduino, conecte las señales a medir en los puertos A0 y A1.
+ *  El disparo del osciloscopio está configurado con el puerto A0.
+ *  Use 'plotter serial' o 'monitor serial' para obtener los datos.
+ *  
+ *  Configuración por defecto:
+ *    comunicación serial:        115200 baud
+ *    frecuencia de muestreo:     10kHz (T=100us)
+ *    número de muestras:         501
+ *    umbral disparo A0:          int 50 = aprox. 250mV
+ *    tiempo refresco datos:      5 segundos
+ *    
  * 
  * Historial de versiones:
  * 
