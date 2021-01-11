@@ -38,6 +38,9 @@ Probado en Arduino Uno.
  
  ### v20.2
  6 de julio de 2020
+ 
+ Primera versión pública.
+ 
  *  Mide 3 canales análogos, en voltios. Rango: 0V a 5V. Precisión 10 bits: 5mV.
  *  Genera señales cuadradas periódicas de amplitud 5V, con duración especificada por el usuario.
  *  Resolución temporal de mediciones: 10ms (100Hz).
