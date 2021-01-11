@@ -4,9 +4,7 @@ Arduino-based oscilloscope and square signal generator.
 Generador de pulsos cuadrados (x2) y osciloscopio (x2) con Arduino.
 
 Diseñado para usar con 'serial plotter' de Arduino IDE.
-
 Resolución kHz.
-
 Probado en Arduino Uno. 
 
 ## Instrucciones de uso
