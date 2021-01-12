@@ -73,7 +73,7 @@ unsigned long mi_baud_rate = 115200;  //en baudios, valores válidos: {9600,1920
 unsigned long periodo_muestreo_us = 100;  //en microsegundos, cada cuánto se hará una lectura de señales
                                           //valor recomendado (us): 100
 //   3) Umbral (threshold) canal A0:
-int umbral_analogo_valor = 50; //cuando la entrada análoga A0 supera este valor, el sistema inicia mediciones.
+int umbral_analogo_valor = 100; //cuando la entrada análoga A0 supera este valor, el sistema inicia mediciones.
                                //valor entre 0 y 1023. Recomendado: 50.
 //   4) Tasa de refresco
 int tiempo_refresco_pantalla_ms = 5000; //tiempo en ms en el cual el sistema deja de medir datos
@@ -83,8 +83,8 @@ const int NUM_DATOS = 501;  // cantidad de datos a medir. Tener presente la capa
                             // 501 datos llena exactamente la gráfica de 'plotter serial' de Arduino IDE.
 //
 //   para generadores
-int periodo_generador_D12_ms = 6;   //periodo señal entregada en pin digital D12, en milisegundos
-int periodo_generador_D13_ms = 10;  //periodo señal entregada en pin digital D13, en milisegundos
+int periodo_generador_D12_ms = 10;  //periodo señal entregada en pin digital D12, en milisegundos
+int periodo_generador_D13_ms = 20;  //periodo señal entregada en pin digital D13, en milisegundos
 ///////////////////////////////
 
 
