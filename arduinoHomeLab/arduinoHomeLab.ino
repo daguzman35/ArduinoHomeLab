@@ -27,7 +27,7 @@
  *    comunicación serial:        115200 baud
  *    frecuencia de muestreo:     10kHz (T=100us)
  *    número de muestras:         501
- *    umbral disparo A0:          int 50 = aprox. 250mV
+ *    umbral disparo A0:          0 (lectura continua)
  *    tiempo refresco datos:      5 segundos
  *    
  * 
