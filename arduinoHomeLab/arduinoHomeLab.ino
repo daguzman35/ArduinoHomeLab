@@ -73,8 +73,9 @@ unsigned long mi_baud_rate = 115200;  //en baudios, valores válidos: {9600,1920
 unsigned long periodo_muestreo_us = 100;  //en microsegundos, cada cuánto se hará una lectura de señales
                                           //valor recomendado (us): 100
 //   3) Umbral (threshold) canal A0:
-int umbral_analogo_valor = 100; //cuando la entrada análoga A0 supera este valor, el sistema inicia mediciones.
-                               //valor entre 0 y 1023. Recomendado: 50.
+int umbral_analogo_valor = 0; //cuando la entrada análoga A0 supera este valor, el sistema inicia mediciones.
+                              //valor entre 0 y 1023. Recomendado: 50.
+                              //Asigne '0' para lectura cuasi-contínua.
 //   4) Tasa de refresco
 int tiempo_refresco_pantalla_ms = 5000; //tiempo en ms en el cual el sistema deja de medir datos
 //   5) tamaño memoria local
@@ -217,8 +218,10 @@ void leerADCs(void)
       if (debo_imprimir_en_serial == false){
         //y si no está imprimiendo datos en serial
 
-        if ((dato_anterior_a0 < umbral_analogo_valor) and (valorA0 >= umbral_analogo_valor)) {
+        if ((umbral_analogo_valor <= 0) or 
+            ((dato_anterior_a0 < umbral_analogo_valor) and (valorA0 >= umbral_analogo_valor))) {
           //si hay flanco de subida, pasando por umbral,
+          //o si el umbral es 0 o negativo
           debo_leer_adcs = true;              //iniciar toma de datos
           i_dato = 1;                         //asegurarse inicie en 1 con el siguiente dato
           tiempo_medidas_inicial_us = hora;   //importante: limpiar tiempos de medida anterior
